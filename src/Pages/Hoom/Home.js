@@ -12,7 +12,6 @@ const Home = () => {
             <Tools></Tools>
             <BussinessSummaries></BussinessSummaries>
             <Reviews></Reviews>
-            <h1>This is home</h1>
         </main>
     );
 };
