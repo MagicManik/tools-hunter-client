@@ -11,6 +11,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import MyReview from './Pages/Dashboard/MyReview';
 import MyOrders from './Pages/Dashboard/MyOrders';
+import Footer from './Pages/Shared/Footer';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path='login' element={<Login></Login>}></Route>
         <Route path='signup' element={<SignUp></SignUp>}></Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer />
     </div>
   );
