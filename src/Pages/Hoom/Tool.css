@@ -25,4 +25,11 @@
     .tool-body {
         height: 500px;
     }
+
+    .buy-now-btn-container button {
+        position: absolute;
+        right: 30px;
+        bottom: 20px;
+
+    }
 }

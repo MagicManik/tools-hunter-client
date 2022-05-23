@@ -3,7 +3,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <section>
+        <section className='pt-72 bg-accent'>
             <div className='bg-primary footer-section'>
                 <div className='py-10'>
                     <h1 className='text-center text-4xl mt-20 font-bold'>TOOLS HUNTER MANUFECTURE LTD.</h1>
