@@ -35,5 +35,6 @@
         grid-template-columns: 1fr;
         grid-gap: 30px;
         padding: 0 16px;
+        padding-top: 50px;
     }
 }

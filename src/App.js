@@ -20,8 +20,6 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='home' element={<Home></Home>}></Route>
 
-
-
         <Route path='dashboard' element={
           <RequireAuth>
             <Dashboard></Dashboard>

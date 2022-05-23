@@ -2,9 +2,13 @@ import React from 'react';
 
 const BussinessSummaries = () => {
     return (
-        <div>
-            <h1>This is my bussiness summireies compooooooo</h1>
-        </div>
+        <section>
+            <h1 className='text-center text-4xl font-bold text-primary'>MILLIONS BUSSINESS TRUST US</h1>
+            <h3 className='text-center text-2xl my-3'>TRY TO UNDERSTAND USER EXPECTATION</h3>
+            <div>
+
+            </div>
+        </section>
     );
 };
 
