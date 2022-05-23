@@ -11,7 +11,7 @@ const Tools = () => {
         <section className='tools-section bg-accent'>
 
             <div>
-                <h1 className='text-center text-4xl font-bold my-10'>Hunt Your Best Tools</h1>
+                <h1 className='text-center text-4xl font-bold mb-10'>Hunt Your Best Tools</h1>
             </div>
             <div className='tool-containers'>
                 {
