@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
@@ -9,7 +9,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 const Login = () => {
 
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-
+    // Using react form hook
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     const [
@@ -22,11 +22,17 @@ const Login = () => {
 
 
     let signInError;
+    // navigate by using RequreAuth
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
+    useEffect(() => {
+        if (user || gUser) {
 
-
-
-
+            navigate(from, { replace: true });
+        }
+    }, [user, gUser, from, navigate])
 
 
 
@@ -41,7 +47,6 @@ const Login = () => {
 
     // submit login form event handler
     const onSubmit = data => {
-        console.log(data);
         signInWithEmailAndPassword(data.email, data.password);
     };
 
@@ -50,7 +55,7 @@ const Login = () => {
         <div className="flex justify-center items-center h-screen">
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
-                    <h2 className="text-3xl font-bold text-center text-secondary">Login</h2>
+                    <h2 className="text-3xl font-bold text-center text-primary">Login</h2>
 
 
                     {/* Login Form */}
@@ -128,7 +133,7 @@ const Login = () => {
                         {signInError}
 
                         {/* submit button */}
-                        <input className='btn btn-primary w-full max-w-xs' type="submit" value='Login' />
+                        <input className='btn btn-primary text-secondary w-full max-w-xs' type="submit" value='Login' />
                     </form>
 
                     {/* toggle signup page */}
