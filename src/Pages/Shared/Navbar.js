@@ -5,13 +5,14 @@ import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Navbar = () => {
-    // using react firebase hook
+    // using react firebase hook for user exist or not
     const [user] = useAuthState(auth);
-
+    // user react firebase hook to log out
     const logout = () => {
         signOut(auth);
-
+        localStorage.removeItem('accessToken');
     };
+
 
 
     const menuItems = <>
@@ -20,15 +21,13 @@ const Navbar = () => {
         <li><Link to="/reviews">Reviews</Link></li>
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to="/about">About</Link></li>
-
         {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
         }
-
         <li>{user ? <button onClick={logout} className="btn btn-ghost">Sign Out</button> : <Link to="/login">Login</Link>}</li>
     </>
     return (
-        <div className="navbar bg-primary">
+        <div className="navbar bg-base-100">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -38,7 +37,7 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Tools Hunter</a>
+                <a className="btn btn-ghost normal-case text-xl">Doctors Portal</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

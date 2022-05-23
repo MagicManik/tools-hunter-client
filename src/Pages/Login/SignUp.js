@@ -34,7 +34,7 @@ const SignUp = () => {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message} {UpdateError?.message}</small></p>
     }
 
-    if (user) {
+    if (user || gUser) {
         navigate('/');
     }
 
