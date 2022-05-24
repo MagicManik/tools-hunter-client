@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css'
 
 const Footer = () => {
+
     return (
         <section className='pt-72 bg-accent'>
             <div className='bg-primary footer-section'>

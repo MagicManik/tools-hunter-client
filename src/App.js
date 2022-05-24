@@ -12,6 +12,8 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import MyReview from './Pages/Dashboard/MyReview';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import Footer from './Pages/Shared/Footer';
+import Parchase from './Pages/Parchase/Parchase';
+import Profile from './Pages/Profile/Profile';
 
 function App() {
   return (
@@ -20,6 +22,13 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='home' element={<Home></Home>}></Route>
+        <Route path='profile' element={<Profile></Profile>}></Route>
+        <Route path='parchase/:id' element={
+          <RequireAuth>
+            <Parchase></Parchase>
+          </RequireAuth>}>
+
+        </Route>
 
         <Route path='dashboard' element={
           <RequireAuth>
