@@ -40,6 +40,12 @@ const MyProfile = () => {
                         <label htmlFor="phone">Phone</label>
                         <input className='my-profile-input-field' type="text" name="phone" id="" placeholder='Phone' required />
 
+                        <label htmlFor="phone">Education</label>
+                        <input className='my-profile-input-field' type="text" name="education" id="" placeholder='Education' required />
+
+                        <label htmlFor="linkedin">Linkedin Profile Link</label>
+                        <input className='my-profile-input-field' type="text" name="linkedin" id="" placeholder='Linkedin profile link' required />
+
                         <label htmlFor="address">Your Address</label>
                         <textarea className='address-input-field' name="address" id="" cols="30" rows="2" placeholder='Enter your address' required></textarea>
 
