@@ -38,7 +38,11 @@
 .confirm-btn {
     display: block;
     margin: auto;
-    width: 90%;
+    left: 0;
+    right: 0;
+    width: 83%;
+    position: absolute;
+    bottom: 13px;
 }
 
 

@@ -20,7 +20,7 @@ const Parchase = () => {
 
             <div className='product-container'>
                 <div className='container'>
-                    <h5 className='text-center font-sans font-bold text-2xl my-5'>Product Details</h5>
+                    <h5 className='text-center font-sans font-bold text-2xl my-3'>Product Details</h5>
                     <img className='img-fluid d-block mx-auto' src={img} alt="" />
                     <h5 className='product-text my-2'>{name}</h5>
                     <small>{description}</small>
@@ -43,7 +43,7 @@ const Parchase = () => {
                 <div className='container'>
 
                     <form>
-                        <h5 className='text-center font-sans font-bold text-2xl my-5'>Please Order Confirm</h5>
+                        <h5 className='text-center font-sans font-bold text-2xl my-3'>Please Order Confirm</h5>
 
                         <label className='mx-6 font-bold' htmlFor="name">Name</label>
                         <input className='confirm-input-field' type="text" name="name" id="" value={user.displayName} disabled readOnly required />
