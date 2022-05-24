@@ -14,6 +14,10 @@ import MyOrders from './Pages/Dashboard/MyOrders';
 import Footer from './Pages/Shared/Footer';
 import Parchase from './Pages/Parchase/Parchase';
 import Profile from './Pages/Profile/Profile';
+import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
+import AddAProduct from './Pages/Dashboard/AddAProduct';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin';
+import ManageProducts from './Pages/Dashboard/ManageProducts';
 
 function App() {
   return (
@@ -37,6 +41,12 @@ function App() {
           <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path='review' element={<MyReview></MyReview>}></Route>
           <Route path='orders' element={<MyOrders></MyOrders>}></Route>
+
+          {/* admin Outlet */}
+          <Route path='manageorder' element={<ManageAllOrders></ManageAllOrders>}></Route>
+          <Route path='add' element={<AddAProduct></AddAProduct>}></Route>
+          <Route path='admin' element={<MakeAdmin></MakeAdmin>}></Route>
+          <Route path='manageproduct' element={<ManageProducts></ManageProducts>}></Route>
           {/* <Route path='users' element={
             <RequireAdmin>
               <Users></Users>
