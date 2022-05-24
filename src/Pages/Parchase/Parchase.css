@@ -6,7 +6,7 @@
 }
 
 .container {
-    height: 650px;
+    height: 620px;
     padding: 20px;
     position: relative;
     border-radius: 18px;
@@ -16,27 +16,7 @@
 
 
 /* form */
-
-.update-container {
-    width: 70%;
-    margin: 60px auto;
-    border-radius: 20px;
-    padding: 5px;
-    background-color: #fff;
-    box-shadow: 0px 2px 70px 0px rgb(110 130 208 / 18%);
-}
-
-.update-title {
-    text-align: center;
-    padding: 30px 0;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    color: #218cff;
-
-}
-
-
-.add-input-field {
+.confirm-input-field {
     width: 90%;
     display: block;
     margin: 8px auto;
@@ -49,12 +29,17 @@
     outline: rgb(255, 220, 220);
 }
 
-.add-input-field:focus {
-    border-color: #007aff;
-    box-shadow: 0 0 0 3px rgb(0 122 255 / 25%);
+.confirm-input-field:focus {
+    border-color: #febd17;
+    box-shadow: 0 0 0 3px rgb(254 189 23 / 25%);
     color: rgb(104, 104, 104);
 }
 
+.confirm-btn {
+    display: block;
+    margin: auto;
+    width: 90%;
+}
 
 
 
@@ -67,16 +52,10 @@
     }
 
     .container {
-        border: 1px solid #007aff;
         padding: 15px;
     }
 
-    .update-container {
-        margin: 35px auto;
-        width: 91%;
-    }
-
-    .add-input-field {
+    .confirm-input-field {
         width: 91%;
     }
 }

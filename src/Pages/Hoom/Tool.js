@@ -17,8 +17,8 @@ const Tool = ({ tool }) => {
             <img src={img} alt="" />
             <h4 className='text-1xl font-bold text-secondary'>{name}</h4>
             <p>{sliceDescription}</p>
-            <p>Available: {available}</p>
-            <p>Minimum Order: {quantity}</p>
+            <p>Available: {available} Pieces</p>
+            <p>Minimum Order: {quantity} Pieces</p>
             <p>Per Unit Price: ${price}</p>
 
             <div className='buy-now-btn-container'>
