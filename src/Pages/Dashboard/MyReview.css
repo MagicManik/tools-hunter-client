@@ -99,18 +99,19 @@
     }
 
     .add-review-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
+        width: 100%;
     }
 
+    .address-input-field {
+        width: 100%;
+    }
 
     .review-form form label {
-        padding-left: 25px;
+        padding-left: 10px;
     }
 
 
     .review-input-field {
-        width: 91%;
+        width: 100%;
     }
 }
