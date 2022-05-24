@@ -40,7 +40,7 @@ const MyReview = () => {
 
     return (
         <section className='review-section'>
-            <h3 className='review-title'>Please Add A Review</h3>
+            <h3 className='review-title'>Please Add a Review</h3>
             <hr />
             <div className='add-review-container'>
                 <div className='review-form'>

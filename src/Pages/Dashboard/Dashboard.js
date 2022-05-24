@@ -11,7 +11,7 @@ const Dashboard = () => {
     return (
         <div className="drawer drawer-mobile">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content pt-6">
+            <div className="drawer-content pt-4 pb-16">
                 {/* <!-- Page content here --> */}
                 {/* <h2 classNameName='text-3xl font-bold text-black-800 text-center my-4'>Welcome To Your Dashboard</h2> */}
                 <Outlet></Outlet>
@@ -24,9 +24,9 @@ const Dashboard = () => {
                     {/* <!-- Sidebar content here --> */}
                     <li><Link to="/dashboard">My Profile</Link></li>
                     <li><Link to="/dashboard/orders">My Orders</Link></li>
-                    <li><Link to="/dashboard/review">Add A Reviews</Link></li>
+                    <li><Link to="/dashboard/review">Add a Reviews</Link></li>
                     <li><Link to="/dashboard/manageorder">Manage All Orders</Link></li>
-                    <li><Link to="/dashboard/add">Add A Product</Link></li>
+                    <li><Link to="/dashboard/add">Add a Product</Link></li>
                     <li><Link to="/dashboard/admin">Make Admin</Link></li>
                     <li><Link to="/dashboard/manageproduct">Manage Products</Link></li>
                 </ul>
