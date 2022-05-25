@@ -1,9 +1,8 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const MakeAdminRow = ({ user, refetch }) => {
+const MakeAdminRow = ({ user, index, refetch }) => {
     const { email, role } = user;
-
 
     const makeAdmin = () => {
         fetch(`http://localhost:5000/user/admin/${email}`, {
@@ -27,12 +26,11 @@ const MakeAdminRow = ({ user, refetch }) => {
             })
     }
 
-
     return (
         <tr>
-            <th>1</th>
+            <th>{index + 1}</th>
             <td>{email}</td>
-            {/* যদি ইউজার এডমিন না হয় তাহলে তার ইমেইল এর পাশে আমরা Make Admin বাটনটাকে দেখাবো।  */}
+
             <td>{role !== 'admin' && <button onClick={makeAdmin} class="btn btn-xs">Make Admin</button>}</td>
             <td><button class="btn btn-xs">Remove User</button></td>
         </tr>
