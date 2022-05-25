@@ -84,11 +84,13 @@ const Parchase = () => {
                     .then(response => response.json())
                     .then(data => {
                         // console.log(data);
+                        if (data.modifiedCount === 1) {
+
+                        }
                     })
 
                 event.target.reset();
-                setMinQuantity(quantity);
-
+                setMinQuantity(tool.quantity);
             })
 
     }
@@ -135,7 +137,7 @@ const Parchase = () => {
                         <label className='mx-6 font-bold' htmlFor="quntity">Quantity</label>
                         <input onChange={handleChange} value={minQuantity || ''} className='confirm-input-field' type="number" name="quantity" id="" required />
 
-                        <label className="label">
+                        <label>
                             {quantity > minQuantity && <span className="mx-6 label-text text-red-600">You cant't place order below than minimum quantity</span>}
                             {minQuantity > available && <span className="mx-6 label-text text-red-600">You cant't place order more than available quantity</span>}
                         </label>

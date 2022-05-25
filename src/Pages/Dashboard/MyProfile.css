@@ -109,8 +109,11 @@
         padding-left: 25px;
     }
 
-
     .my-profile-input-field {
         width: 91%;
+    }
+
+    .confirm-btn {
+        width: 88%;
     }
 }

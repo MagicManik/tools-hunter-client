@@ -39,7 +39,7 @@
 
 
 /* form */
-.review-input-field {
+.add-input-field {
     width: 90%;
     display: block;
     margin: 8px auto;
@@ -72,7 +72,7 @@
     color: rgb(104, 104, 104);
 }
 
-.review-input-field:focus {
+.add-input-field:focus {
     border-color: #febd17;
     box-shadow: 0 0 0 3px rgb(254 189 23 / 25%);
     color: rgb(104, 104, 104);
@@ -111,7 +111,11 @@
     }
 
 
-    .review-input-field {
+    .add-input-field {
         width: 100%;
+    }
+
+    .confirm-btn {
+        width: 88%;
     }
 }
