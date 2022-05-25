@@ -53,6 +53,7 @@ const MyReview = () => {
                         <label htmlFor="name">Your Name</label>
                         <input className='review-input-field' type="text" name="name" id="" value={user.displayName} disabled readOnly required />
 
+                        {/* rating lavel and button handle */}
                         <label htmlFor="rating">Rating must be 1 into 5</label>
                         <input onChange={handleRating} type="number" name="rating" id="rating-input-field" value={rating || ''} placeholder="Rating" required />
 
@@ -61,11 +62,10 @@ const MyReview = () => {
                             {rating < 1 && <span className="text-xs label-text text-red-600">Rating must be 1 into 5</span>}
                         </label>
 
-                        <br />
 
-                        <label htmlFor="picture">Your Image URL</label>
+
+                        <label className='block' htmlFor="picture">Your Image URL</label>
                         <input className='review-input-field' type="text" name="img" id="" placeholder='Image URL' required />
-
 
                         <label htmlFor="review">Type your review</label>
                         <textarea className='address-input-field' name="review" id="" cols="30" rows="2" placeholder='Type your review' required></textarea>

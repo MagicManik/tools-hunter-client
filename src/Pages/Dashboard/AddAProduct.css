@@ -1,4 +1,4 @@
-.review-section {
+.add-product-section {
     box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
     margin-right: 100px;
     margin-left: 50px;
@@ -22,7 +22,7 @@
 }
 
 .add-product-form {
-    height: 450px;
+    height: 480px;
     padding: 20px;
     position: relative;
     border-radius: 18px;
@@ -42,8 +42,23 @@
 .add-input-field {
     width: 90%;
     display: block;
+    margin: 5px auto;
+    margin-bottom: 20px;
+    padding: 10px 16px;
+    border-radius: 60px;
+    border: 1px solid #d6d6d6;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    outline: rgb(255, 220, 220);
+}
+
+#available-input-field,
+#quantity-input-field {
+    width: 90%;
+    display: block;
     margin: 8px auto;
-    margin-bottom: 14px;
+    margin-bottom: 0px;
     padding: 10px 16px;
     border-radius: 60px;
     border: 1px solid #d6d6d6;
@@ -65,6 +80,7 @@
     font-weight: bold;
     outline: rgb(255, 220, 220);
 }
+
 
 .address-input-field:focus {
     border-color: #febd17;
@@ -92,7 +108,7 @@
 
 @media screen and (max-width: 576px) {
 
-    .review-section {
+    .add-product-section {
         box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
         margin: 16px;
         border-radius: 10px;
