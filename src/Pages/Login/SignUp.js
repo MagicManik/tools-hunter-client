@@ -4,11 +4,12 @@ import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import { Link, useNavigate } from 'react-router-dom';
+import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
 
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-    // Using react form hook
+
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     const [
@@ -17,10 +18,10 @@ const SignUp = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
-    // Using react firebase hook for update user
+
     const [updateProfile, updating, UpdateError] = useUpdateProfile(auth);
 
-
+    const [token] = useToken(user || gUser);
 
     const navigate = useNavigate();
 
@@ -34,12 +35,11 @@ const SignUp = () => {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message} {UpdateError?.message}</small></p>
     }
 
-    if (user || gUser) {
+    if (token) {
         navigate('/');
     }
 
-
-    // submit login form event handler
+    // login form event handler
     const onSubmit = async data => {
         // console.log(data);
         // create user
@@ -56,11 +56,10 @@ const SignUp = () => {
                 <div className="card-body">
                     <h2 className="text-3xl font-bold text-center text-primary">Sign Up</h2>
 
-
                     {/* Sign Up Form */}
                     <form onSubmit={handleSubmit(onSubmit)}>
 
-                        {/* ___ name field ___ */}
+                        {/* name field */}
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Name</span>
@@ -89,10 +88,7 @@ const SignUp = () => {
                             </label>
                         </div>
 
-
-
-
-                        {/* ___ email field ___ */}
+                        {/* email field */}
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -126,8 +122,7 @@ const SignUp = () => {
                             </label>
                         </div>
 
-
-                        {/* ___ password field ___ */}
+                        {/*  password field */}
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Password</span>

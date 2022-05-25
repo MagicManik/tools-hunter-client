@@ -4,12 +4,12 @@ import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-
+import useToken from '../../hooks/useToken';
 
 const Login = () => {
 
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-    // Using react form hook
+
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     const [
@@ -19,7 +19,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-
+    const [token] = useToken(user || gUser);
 
     let signInError;
     // navigate by using RequreAuth
@@ -28,12 +28,11 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
-        if (user || gUser) {
+        if (token) {
 
             navigate(from, { replace: true });
         }
-    }, [user, gUser, from, navigate])
-
+    }, [token, from, navigate])
 
 
     if (loading || gLoading) {
@@ -44,12 +43,11 @@ const Login = () => {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message}</small></p>
     }
 
-
     // submit login form event handler
     const onSubmit = data => {
+        console.log(data);
         signInWithEmailAndPassword(data.email, data.password);
     };
-
 
     return (
         <div className="flex justify-center items-center h-screen">
