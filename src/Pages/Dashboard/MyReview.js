@@ -35,7 +35,7 @@ const MyReview = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    toast('Your item successfully added.')
+                    toast('Your review successfully added. Thank you.')
                     event.target.reset();
                 }
             })
