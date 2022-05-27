@@ -8,7 +8,7 @@ const Banner = () => {
             <div className='banner-body'>
                 <div className=''>
                     <h1 className='banner-heading'>Tools Hunter Manufecture LTD.</h1>
-                    <p className='banner-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, iusto! Ducimus quam blanditiis cumque magni repellendus quidem. Reprehenderit nihil cupiditate quam? Possimus ab facilis quasi quod nihil in dolorem voluptas.</p>
+                    <p className='banner-text'>We are Tools Hander manufacturer. We make world class hardware tools using advanced technology. For example hammer, drill machine, screwdriver, wrench, Pliers, Measuring Tape, Chisel, Soldering Iron, shovel, electric saw, hacksaw, paint roller, paintbrush, sandpaper, nut, boltsetc.</p>
                 </div>
                 <div className='banner-img'>
                     <img src={banner1} alt="banner" />

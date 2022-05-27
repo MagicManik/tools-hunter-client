@@ -1,11 +1,12 @@
 import React from "react";
+import './Contact.css'
 
 const Contact = () => {
     return (
-        <section className="bg-accent">
-            <div className='bg-primary px-10 py-14 '>
+        <section className="custom-bg">
+            <div className='contact-bg px-10 py-14 '>
                 <div className='text-center pb-14 text-white'>
-                    <p className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-accent to-secondary'>
+                    <p className='text-3xl font-bold text-primary from-accent to-secondary'>
                         Contact Us
                     </p>
                     <h1 className='text-4xl font-bold mt-3'>Stay connected with us</h1>

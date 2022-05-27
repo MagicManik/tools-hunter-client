@@ -6,7 +6,7 @@ const ManageRow = ({ user, refetch }) => {
 
 
     const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/manage/${email}`, {
+        fetch(`https://agile-fortress-81625.herokuapp.com/user/manage/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

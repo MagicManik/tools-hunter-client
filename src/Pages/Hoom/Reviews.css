@@ -22,7 +22,7 @@
     display: block;
     text-align: center;
     padding-bottom: 50px;
-    background-image: radial-gradient(circle at 16% 0, #1dff09, #febd17 41%, #ff4b1e 64%, #ff0202 81%);
+    background: linear-gradient(80deg, #FD7F63, #E85CBA, #A546E9, #923EF2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

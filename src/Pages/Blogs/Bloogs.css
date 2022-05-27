@@ -1,0 +1,27 @@
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin: 100px;
+}
+
+.context-api,
+.semantic-tag {
+    border: 1px silver solid;
+    padding: 20px;
+    border-radius: 18px;
+}
+
+.gradient-text-2 {
+    background: linear-gradient(80deg, #FD7F63, #E85CBA, #A546E9, #923EF2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 576px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+        grid-gap: 16px;
+        margin: 16px;
+    }
+}

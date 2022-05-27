@@ -45,7 +45,7 @@ const Parchase = () => {
 
         // console.log(order);
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://agile-fortress-81625.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -72,7 +72,7 @@ const Parchase = () => {
                 const updatedItem = { quantity };
 
                 // update data to server
-                const url = `http://localhost:5000/tool/${_id}`
+                const url = `https://agile-fortress-81625.herokuapp.com/tool/${_id}`
 
                 fetch(url, {
                     method: 'PUT',
@@ -138,11 +138,11 @@ const Parchase = () => {
                         <input onChange={handleChange} value={minQuantity || ''} className='confirm-input-field' type="number" name="quantity" id="" required />
 
                         <label>
-                            {quantity > minQuantity && <span className="mx-6 label-text text-red-600">You cant't place order below than minimum quantity</span>}
-                            {minQuantity > available && <span className="mx-6 label-text text-red-600">You cant't place order more than available quantity</span>}
+                            {parseInt(quantity) > minQuantity && <span className="mx-6 label-text text-red-600">You cant't place order below than minimum quantity</span>}
+                            {minQuantity > parseInt(available) && <span className="mx-6 label-text text-red-600">You cant't place order more than available quantity</span>}
                         </label>
 
-                        <input className='btn btn-primary confirm-btn' type="submit" disabled={quantity > minQuantity || minQuantity > available} value="Confirm Order" />
+                        <input className='btn btn-primary confirm-btn' type="submit" disabled={parseInt(quantity) > minQuantity || minQuantity > parseInt(available)} value="Confirm Order" />
 
                     </form>
 

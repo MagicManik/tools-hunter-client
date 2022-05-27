@@ -8,7 +8,7 @@ const ManageProducts = () => {
     const [deleteTool, setDeleteTool] = useState(null);
 
     const { data: tools, isLoading, refetch } = useQuery('tools', () =>
-        fetch(`http://localhost:5000/tool`)
+        fetch(`https://agile-fortress-81625.herokuapp.com/tool`)
             .then(res => res.json())
     )
 
@@ -17,8 +17,8 @@ const ManageProducts = () => {
     }
 
     return (
-        <div className='my-10'>
-            <h4 className='text-5xl text-secondary text-center my-12'>Manage Product</h4>
+        <div className='my-7'>
+            <h4 className='text-4xl gradient-text-2 font-bold text-center pb-8'>Manage Product</h4>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
                     tools?.map(tool => <Items

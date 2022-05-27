@@ -5,9 +5,9 @@ const Footer = () => {
 
     return (
         <section className='pt-72 bg-accent'>
-            <div className='bg-primary footer-section'>
+            <div className='custom-bg footer-section'>
                 <div className='py-10'>
-                    <h1 className='text-center text-4xl mt-20 font-bold'>TOOLS HUNTER MANUFECTURE LTD.</h1>
+                    <h1 className='text-center text-4xl text-white mt-20 font-bold'>TOOLS HUNTER MANUFECTURE LTD.</h1>
                     <div className='footer-container'>
                         <div className='footer-menu'>
                             <h5>SHOP AND LEARN</h5>

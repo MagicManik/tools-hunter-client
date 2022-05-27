@@ -19,6 +19,8 @@ import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
 import AddAProduct from './Pages/Dashboard/AddAProduct';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
+import Blogs from './Pages/Blogs/Blogs';
+import Pay from './Pages/Dashboard/Pay';
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='home' element={<Home></Home>}></Route>
         <Route path='profile' element={<Profile></Profile>}></Route>
+        <Route path='blogs' element={<Blogs></Blogs>}></Route>
         <Route path='parchase/:id' element={
           <RequireAuth>
             <Parchase></Parchase>
@@ -70,6 +73,8 @@ function App() {
             </RequireAdmin>
           }></Route>
 
+          {/* payment route */}
+          <Route path='pay/:id' element={<Pay></Pay>}></Route>
         </Route>
 
 

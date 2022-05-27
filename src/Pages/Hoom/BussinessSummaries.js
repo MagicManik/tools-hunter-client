@@ -9,9 +9,9 @@ const BussinessSummaries = () => {
 
 
     return (
-        <section className='bg-primary summaries-section'>
+        <section className='custom-bg summaries-section'>
             <div className='py-10'>
-                <h1 className='text-center text-4xl font-bold'>MILLIONS BUSSINESS TRUST US</h1>
+                <h1 className='text-center text-4xl text-white font-bold'>MILLIONS BUSSINESS TRUST US</h1>
                 <h3 className='text-center text-2xl my-3'>TRY TO UNDERSTAND USER EXPECTATION</h3>
 
                 <div className='summaries-container'>

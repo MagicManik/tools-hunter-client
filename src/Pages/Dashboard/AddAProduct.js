@@ -29,7 +29,7 @@ const AddAProduct = () => {
         }
 
 
-        fetch('http://localhost:5000/tool', {
+        fetch('https://agile-fortress-81625.herokuapp.com/tool', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
