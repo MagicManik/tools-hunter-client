@@ -35,18 +35,17 @@ const ManageAllOrders = () => {
             .then(data => {
                 // setProcessing(false);
                 console.log('Backend data', data);
+                toast.success('Shipping Done')
                 refetch();
             })
 
     }
 
 
-
-
     const handleOrderDelete = id => {
 
-        if (window.confirm()) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+        if (window.confirm('Delete Confirm?')) {
+            fetch(`https://agile-fortress-81625.herokuapp.com/orders/${id}`, {
                 method: 'DELETE',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -55,7 +54,7 @@ const ManageAllOrders = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount) {
-                        toast.success(`${id} is deleted`);
+                        toast.success('Delete success');
                         refetch();
                     }
                 })
@@ -90,14 +89,14 @@ const ManageAllOrders = () => {
 
                                 <td>{
                                     <label className='manage-order-td'>
-                                        {order.status === false && <span>Pending</span>}
+                                        {order.status === false && <span className='text-yellow-400'>Pending</span>}
 
                                         {
-                                            (order.paid === true && order.status === true) && <span>Shipped</span>
+                                            (order.paid === true && order.status === true) && <span className='text-green-500'>Shipped</span>
                                         }
 
                                         {order.transactionId === undefined
-                                            && <span className="text-yellow-400 text-base">Unpaid</span>}
+                                            && <span className="text-red-500 text-base">Unpaid</span>}
                                     </label>
                                 }
                                 </td>
@@ -105,16 +104,16 @@ const ManageAllOrders = () => {
 
                                 <td>{
                                     <label className='manage-order-td'>
-                                        {order.paid === true &&
+                                        {order.status === false &&
 
-                                            <button onClick={() => handleShipping(order._id)} className='btn btn-primary'>shipped</button>
+                                            <button onClick={() => handleShipping(order._id)} className='btn btn-primary btn-xs'>shipped</button>
 
                                         }
 
 
                                         {order.transactionId === undefined &&
 
-                                            <button onClick={() => handleOrderDelete(order._id)} className='btn btn-primary'>Delete</button>
+                                            <button onClick={() => handleOrderDelete(order._id)} className='btn btn-error btn-xs'>Delete</button>
 
                                         }
 
