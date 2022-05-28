@@ -2,7 +2,7 @@
     position: relative;
     margin: 0 20px;
     border-radius: 20px;
-    padding: 0 100px;
+    padding: 50px 100px;
 }
 
 .footer-container {
@@ -23,8 +23,16 @@
     height: 200px;
     width: 75%;
     border-radius: 18px;
-    background-color: #fff;
+    background: linear-gradient(80deg, #FD7F63, #E85CBA, #A546E9, #923EF2);
+    /* background-color: rgb(236, 121, 121); */
     box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+}
+
+.quote h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 700px;
 }
 
 
@@ -60,5 +68,13 @@
 
     .footer-menu {
         padding: 10px;
+    }
+
+
+
+    .quote h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 20px;
     }
 }

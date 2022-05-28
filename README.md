@@ -1,28 +1,28 @@
 # FRESH FRUITS WAREHOUSE
 
-Live Website Link > [https://fresh-fruits-warehouse-64fd3.web.app](https://fresh-fruits-warehouse-64fd3.web.app).
+Live Website Link > [https://tools-hunter.web.app/](https://tools-hunter.web.app/).
 
-Server Link > [https://shrouded-mountain-52584.herokuapp.com/](https://shrouded-mountain-52584.herokuapp.com/).
+Server Code Link > [https://github.com/programming-hero-web-course1/manufacturer-website-server-side-MagicManik](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-MagicManik).
 
 ## PROJECT DESCRIPTION
 
-`` This is a remarkable, classic and elegant design of react project. The great thing is that I have been able to design as much as I like in this project.
- This project has tried its best to customize the components of React Bootstrap and design as we wish. I've tried customization on my own. Alhamdulillah I have been successful most of the time. Alhamdulillah again, In this project I was able to do a lot of customizations on my own which I couldn't find on YouTube and Google.
+`` This is a Amaesing, Classical react project.
+ This project has tried its best to customize the components of React Tailwind and design as we wish. I've tried customization on my own. Alhamdulillah In this project I was able to do amaesing design on my own.
  
- Especially the hamburger button at React Bootstrap. Use of OffCanvas with Responsive Navbar, Bootstrap Carousel Indicator, Proper Use of React Router CustomLink, Use of Text with Carousel Images, etc. I'm not saying the design is the best. I know I could have done better if I had time.
+This project with Responsive Navbar, Tailwind table, card, button etc. This page has some special features like special user dashboard and admin rule.
 
-However, the main elements used in this project are React, React Bootstrap, Google Font, Firebase, Mongodb, Express js, Row HTML and CSS, Json Web Token etc.``
+However, the main elements used in this project are React, React Tailwind, Google Font, Firebase, Mongodb, Express js, Row HTML and CSS, Json Web Token etc.``
 
-NOTE: Images for this project are collected but optimized with my own Photoshop. Thank you so much!
+NOTE: Images for this project are collected from dewalt website.
 
 
 ## PROJECT FEATCHER
 
-* Responsive Navbar with offcanvas in small devices
+* Responsive Navbar and responsive for computer and small devices
 
-* Users can create an account and update stock
+* Users can create an account and update there profile. User can buy product his/her vertual card. Example visa, master etc.
 
-* Users will have see their own stock and manage inventory
+* Users can post his/her review and.
 
 * Users can login directly with their Gmail or email and password.
 
@@ -32,7 +32,7 @@ NOTE: Images for this project are collected but optimized with my own Photoshop.
 ## PROJECT MATERIALS
 
 # FRONT-END
-* REACT JS, REACT ROUTER, CUSTOMLINK, BOOTSTRAP, ROW (HTML, CSS), GOOGLE FONT, FONTAWASOME ICON ETC. 
+* REACT JS, REACT ROUTER, CUSTOMLINK, TAILWIND, DAISYUI, ROW (HTML, CSS), GOOGLE FONT, OPTIMIZED IMAGE ETC. 
 
 # BACK-END
 * NODE JS WITH MONGODB, GOOGLE FIREBASE, EXPRESS JS, REACT FIREBASE HOOK ETC. 

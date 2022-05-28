@@ -1,4 +1,8 @@
 .custom-bg {
-    background-color: black;
+    background-color: #febd17;
+}
+
+
+.contact-bg {
     background: linear-gradient(80deg, #FD7F63, #E85CBA, #A546E9, #923EF2);
 }

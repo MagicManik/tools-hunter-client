@@ -7,7 +7,6 @@ const Footer = () => {
         <section className='pt-72 bg-accent'>
             <div className='custom-bg footer-section'>
                 <div className='py-10'>
-                    <h1 className='text-center text-4xl text-white mt-20 font-bold'>TOOLS HUNTER MANUFECTURE LTD.</h1>
                     <div className='footer-container'>
                         <div className='footer-menu'>
                             <h5>SHOP AND LEARN</h5>
@@ -63,7 +62,9 @@ const Footer = () => {
                 </div>
 
                 <div className='quote'>
-
+                    <h1>TOOLS HUNTER MANUFECTURE LTD.</h1>
+                    <h3 className='text-center text-white'>TRY TO UNDERSTAND USER EXPECTATION</h3>
+                    <button className='btn btn-primary mt-4 block mx-auto'>Try Your Best Tool</button>
                 </div>
             </div>
 

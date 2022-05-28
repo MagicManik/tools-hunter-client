@@ -38,8 +38,10 @@ const BussinessSummaries = () => {
                 </div>
             </div>
 
-            <div className='quote-container'>
-
+            <div className='quote-container bg-red-400'>
+                <h1 className='text-center py-3 text-white text-2xl bg-slate-700'>TOOLS HUNTER MANUFECTURE LTD.</h1>
+                <h3 className='text-center text-white'>TRY TO UNDERSTAND USER EXPECTATION</h3>
+                <button className='btn btn-primary mt-4 block mx-auto'>Try Your Best Tool</button>
             </div>
         </section>
     );

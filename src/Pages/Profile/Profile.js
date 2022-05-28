@@ -8,7 +8,7 @@ const Profile = () => {
 
 
                 <div className='profile-content'>
-                    <div className='know-me custom-bg'>
+                    <div className='know-me'>
                         <h3 className='text-2xl text-center'>Manik Islam Mahi</h3>
                         <h5 className='text-primary text-center mb-5 mt-1'>Programmer & Designer</h5>
                         <label htmlFor="email">EMAIL</label>
