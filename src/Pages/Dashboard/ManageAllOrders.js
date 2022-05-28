@@ -16,8 +16,27 @@ const ManageAllOrders = () => {
         return <Loading></Loading>
     }
 
-    const handleShipping = id => {
-        console.log(id)
+
+
+    const handleShipping = _id => {
+        const payment = {
+            status: true,
+        }
+
+        fetch(`https://agile-fortress-81625.herokuapp.com/orders/${_id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            },
+            body: JSON.stringify(payment)
+        })
+            .then(res => res.json())
+            .then(data => {
+                // setProcessing(false);
+                console.log('Backend data', data);
+                refetch();
+            })
 
     }
 
@@ -25,27 +44,30 @@ const ManageAllOrders = () => {
 
 
     const handleOrderDelete = id => {
-        window.confirm();
-        fetch(`http://localhost:5000/orders/${id}`, {
-            method: 'DELETE',
-            headers: {
-                authorization: `Bearer ${localStorage.getItem('accessToken')}`
-            },
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount) {
-                    toast.success(`${id} is deleted`);
-                    refetch();
-                }
+
+        if (window.confirm()) {
+            fetch(`http://localhost:5000/orders/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                },
             })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount) {
+                        toast.success(`${id} is deleted`);
+                        refetch();
+                    }
+                })
+        }
+
     }
 
 
 
 
     return (
-        <div className="overflow-x-auto bg-accent pt-9">
+        <div className="overflow-x-auto bg-accent py-9">
             <table className="table w-11/12 mx-auto">
                 <thead>
                     <tr>
@@ -68,10 +90,10 @@ const ManageAllOrders = () => {
 
                                 <td>{
                                     <label className='manage-order-td'>
-                                        {order.paid === true && <span>Pending</span>}
+                                        {order.status === false && <span>Pending</span>}
 
                                         {
-                                            (order.paid === false && order.status === false) && <span>Shipped</span>
+                                            (order.paid === true && order.status === true) && <span>Shipped</span>
                                         }
 
                                         {order.transactionId === undefined
