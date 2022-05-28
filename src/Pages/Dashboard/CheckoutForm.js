@@ -112,6 +112,7 @@ const CheckoutForm = ({ order }) => {
 
             const payment = {
                 order: _id,
+                status: false,
                 transactionId: paymentIntent?.id
             }
 
