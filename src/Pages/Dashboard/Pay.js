@@ -9,7 +9,7 @@ import CheckoutForm from './CheckoutForm';
 const Pay = () => {
     const { id } = useParams();
 
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://agile-fortress-81625.herokuapp.com/orders/${id}`;
 
     const { data: order, isLoading } = useQuery(['order', id], () => fetch(url, {
         method: 'GET',

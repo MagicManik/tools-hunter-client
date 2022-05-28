@@ -8,7 +8,7 @@ const ManageProducts = () => {
     const [deleteTool, setDeleteTool] = useState(null);
 
     const { data: tools, isLoading, refetch } = useQuery('tools', () =>
-        fetch(`http://localhost:5000/tool`)
+        fetch(`https://agile-fortress-81625.herokuapp.com/tool`)
             .then(res => res.json())
     )
 
