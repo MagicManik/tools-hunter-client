@@ -45,7 +45,7 @@ const Parchase = () => {
 
         // console.log(order);
 
-        fetch('https://agile-fortress-81625.herokuapp.com/orders', {
+        fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -72,7 +72,7 @@ const Parchase = () => {
                 const updatedItem = { quantity };
 
                 // update data to server
-                const url = `https://agile-fortress-81625.herokuapp.com/tool/${_id}`
+                const url = `http://localhost:5000/tool/${_id}`
 
                 fetch(url, {
                     method: 'PUT',

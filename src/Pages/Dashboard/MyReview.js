@@ -25,7 +25,7 @@ const MyReview = () => {
         // console.log(review);
 
 
-        fetch('https://agile-fortress-81625.herokuapp.com/review', {
+        fetch('http://localhost:5000/review', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

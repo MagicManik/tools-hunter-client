@@ -5,7 +5,7 @@ import MakeAdminRow from './MakeAdminRow';
 
 const Users = () => {
     const { data: users, isLoading, refetch } = useQuery('users', () =>
-        fetch('https://agile-fortress-81625.herokuapp.com/user', {
+        fetch('http://localhost:5000/user', {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
